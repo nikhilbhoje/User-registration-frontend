@@ -1,0 +1,33 @@
+<div *ngIf="flag" class="alert alert-success">
+{{message}}
+</div>
+
+<!-- Table Started -->
+<table class="table table-striped">
+<thead class="thead-dark"> 
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Pin Code</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let farmer of farmers">
+<td>{{farmer.id}}</td>
+<td>{{farmer.firstName}}</td>
+<td>{{farmer.lastName}}</td>
+<td>{{farmer.email}}</td>
+<td>{{farmer.address.city}}</td>
+<td>{{farmer.address.pinCode}}</td>
+<td>
+    <button class="btn btn-danger" (click)="deleteFarmer(farmer.id)">Delete</button>
+</td>
+    </tr>
+</tbody>
+</table>
+
+<!-- Table Ended -->
