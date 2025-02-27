@@ -1,4 +1,4 @@
-# Farmer-registration-frontend
+# User-registration-frontend
 
 # This project was generated with Angular CLI version 18.0.6.
 
